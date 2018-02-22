@@ -1,0 +1,20 @@
+//Esto es Sass
+
+/*****El orden importa****/
+
+
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+//HTML
+@import 'reset';
+@import 'elements';
+
+
+
+/*Layouts*/
+@import 'layout/content';
+
+/*Componentes*/
+@import 'componentes/boton';

@@ -1,0 +1,39 @@
+/*****El orden importa****/
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Elementos*/
+h1 {
+  color: green;
+}
+
+/* /Elementos*/
+/*Layouts*/
+.container {
+  margin: auto;
+  max-width: 1920px;
+}
+
+/*Componentes*/
+.btn, .btn-azul {
+  border: 1px solid green;
+  color: red;
+  display: inline-block;
+  height: 50px;
+  min-width: 100px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
+}
+
+.btn:hover, .btn-azul:hover {
+  background-color: green;
+}
+
+.btn-azul:hover {
+  background-color: blue;
+}

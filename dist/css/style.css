@@ -8,9 +8,19 @@
 /*Elementos*/
 h1 {
   color: green;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
 }
 
 /* /Elementos*/
+form input {
+  display: block;
+  margin: auto;
+}
+
 /*Layouts*/
 .container {
   margin: auto;

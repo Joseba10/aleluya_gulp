@@ -8,6 +8,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+const babel = require('gulp-babel');
 
 /*
 * Tareas
@@ -31,12 +32,29 @@ gulp.task('sass-prod', function () {
     .pipe(gulp.dest('./dist/css/'));
 });
 
+
+gulp.task('es6toes5', () =>
+    gulp.src('./src/js/main.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('dist/js/'))
+);
+
+
+
+gulp.task('move', function(){
+    gulp.src('./src/js/*.js').pipe(gulp.dest('./dist/js/'));
+
+}
+
+);
 /*definir tarea por defecto y escuchador */
 
 //Default task
 gulp.task('default',function() {
 
-    gulp.watch('src/**/*.*',['concatenar','sass']); //Cualquier archivo y extension
+    gulp.watch('src/**/*.*',['concatenar','sass','move']); //Cualquier archivo y extension
 
 });
 
